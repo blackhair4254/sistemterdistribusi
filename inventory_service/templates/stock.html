@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Barang</title>
+</head>
+<body>
+    <h1>Daftar Stok Barang</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>SKU</th>
+            <th>Nama Barang</th>
+            <th>Jumlah Stok</th>
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.id }}</td>
+            <td>{{ stock.sku }}</td>
+            <td>{{ stock.nama_barang }}</td>
+            <td>{{ stock.jumlah_stok }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
